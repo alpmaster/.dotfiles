@@ -1,3 +1,10 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+    link:
+      relink: true
+- clean: ['~']
+- link:
+    ~/.bashrc: .bashrc
+    ~/.kubectl_aliases: .kubectl_aliases
+    ~/.tmux.conf: .tmux.conf
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
