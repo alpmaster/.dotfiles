@@ -1,10 +1,18 @@
 - defaults:
     link:
+      create: true
       relink: true
+
 - clean: ['~']
+
 - link:
-    ~/.bashrc: .bashrc
+    ~/.bash_aliases: .bash_aliases
     ~/.kubectl_aliases: .kubectl_aliases
     ~/.tmux.conf: .tmux.conf
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+#  - [. ~/.bash_aliases, Activation aliases]
+  -
+    command: grep -qxF 'if [ -f ~/.bash_aliases ]; then' ~/.bashrc || echo -e 'if [ -f ~/.bash_aliases ]; then\n    . ~/.bash_aliases\nfi' >> ~/.bashrc
+    description: Including .bash_aliases to .bashrc
