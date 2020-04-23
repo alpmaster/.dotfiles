@@ -8,7 +8,8 @@
 - link:
     ~/.bash_aliases: .bash_aliases
     ~/.kubectl_aliases: .kubectl_aliases
-    ~/.tmux.conf: .tmux.conf
+#    ~/.tmux.conf: .tmux.conf
+    ~/.config/mc/mcedit/Syntax: mc/Syntax
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
