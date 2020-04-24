@@ -5,6 +5,7 @@ export KUBE_EDITOR="mcedit"
 #export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 source <(kubectl completion bash)
+source <(kubeadm completion bash)
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 
