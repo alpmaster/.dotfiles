@@ -1,7 +1,7 @@
 ###Kubernetes
 
 export KUBE_EDITOR="mcedit"
-
+export ETCDCTL_API=3
 #export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 source <(kubectl completion bash)
