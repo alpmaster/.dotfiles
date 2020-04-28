@@ -14,5 +14,5 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   -
-    command: grep -qxF 'if [ -f ~/.bash_aliases ]; then' ~/.bashrc || echo -e 'if [ -f ~/.bash_aliases ]; then\n    . ~/.bash_aliases\nfi' >> ~/.bashrc
+    command: echo -e 'if [ -f ~/.bash_aliases ]; then\n    . ~/.bash_aliases\nfi' >> ~/.bashrc
     description: Including .bash_aliases to .bashrc if not yet
