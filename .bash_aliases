@@ -22,10 +22,16 @@ export PS1='[\u@\h \W $(kube_ps1)]\$ '
 #https://github.com/ahmetb/kubectx
 [ -f $HOME/.dotfiles/kubectx/completion/kubectx.bash ] && source $HOME/.dotfiles/kubectx/completion/kubectx.bash
 export PATH="$HOME/.dotfiles/kubectx:$PATH"
-alias kctx='kubectx'
-alias kns='kubens'
 
 #export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+#my alias
+alias kc='kubectl create --dry-run -o yaml'
+alias kctx='kubectx'
+alias ke='kubectl explain'
+alias kev='watch -n 0.5 "kubectl get events --sort-by=.metadata.creationTimestamp | tail -5"'
+alias kns='kubens'
+alias kr='kubectl run --dry-run -o yaml'
+alias krpo='kubectl run --generator=run-pod/v1 --dry-run -o yaml'
 alias kw='watch -n 0.5 "kubectl config current-context; echo ''; kubectl config view | grep namespace; echo ''; kubectl get namespace,node,ingress,pod,svc,job,cronjob,deployment,rs,pv,pvc,secret,ep -o wide"'
-alias ke='watch -n 0.5 "kubectl get events --sort-by=.metadata.creationTimestamp | tail -5"'
+
