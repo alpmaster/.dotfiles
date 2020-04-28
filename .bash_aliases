@@ -33,5 +33,5 @@ alias kev='watch -n 0.5 "kubectl get events --sort-by=.metadata.creationTimestam
 alias kns='kubens'
 alias kr='kubectl run --dry-run -o yaml'
 alias krpo='kubectl run --generator=run-pod/v1 --dry-run -o yaml'
-alias kw='watch -n 0.5 "kubectl config current-context; echo ''; kubectl config view | grep namespace; echo ''; kubectl get namespace,node,ingress,pod,svc,job,cronjob,deployment,rs,pv,pvc,secret,ep -o wide"'
+alias kw='watch -n 0.5 "kubectl get namespace,node,ingress,pod,svc,job,cronjob,deployment,rs,pv,pvc,secret,ep -o wide"'
 
