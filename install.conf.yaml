@@ -15,4 +15,4 @@
   - [git submodule update --init --recursive, Installing submodules]
   -
     command: echo -e 'if [ -f ~/.bash_aliases ]; then\n    . ~/.bash_aliases\nfi' >> ~/.bashrc
-    description: Including .bash_aliases to .bashrc if not yet
+    description: Include .bash_aliases to end of .bashrc
