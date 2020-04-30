@@ -14,6 +14,9 @@ source <(kubeadm completion bash)
 for _a in $(sed '/^alias /!d;s/^alias //;s/=.*$//' ~/.kubectl_aliases); do
   complete -F _complete_alias "$_a"
 done
+for _a in $(sed '/^alias /!d;s/^alias //;s/=.*$//' ~/.bash_aliases); do
+  complete -F _complete_alias "$_a"
+done
 
 #https://github.com/jonmosco/kube-ps1
 [ -f ~/.dotfiles/kube-ps1/kube-ps1.sh ] && source ~/.dotfiles/kube-ps1/kube-ps1.sh
