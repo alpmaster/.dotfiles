@@ -30,12 +30,14 @@ export PATH="$HOME/.dotfiles/kubectx:$PATH"
 
 #my alias
 alias kc='kubectl create'
+alias kce='kubectl create --edit -f'
 alias kcoyaml='kubectl create --dry-run -o yaml'
 alias kctx='kubectx'
 alias ke='kubectl explain'
 alias kev='watch -n 0.5 "kubectl get events --sort-by=.metadata.creationTimestamp | tail -5"'
 alias kns='kubens'
 alias kr='kubectl run'
+alias kr='kubectl replace --force -f'
 alias kroyaml='kubectl run --dry-run -o yaml'
 alias krpo='kubectl run --generator=run-pod/v1'
 alias krpooyaml='kubectl run --generator=run-pod/v1 --dry-run -o yaml'
