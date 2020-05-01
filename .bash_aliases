@@ -29,6 +29,7 @@ export PATH="$HOME/.dotfiles/kubectx:$PATH"
 #export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 #my alias
+alias kar='kubectl apply --record --recursive -f'
 alias kc='kubectl create'
 alias kce='kubectl create --edit -f'
 alias kcoyaml='kubectl create --dry-run -o yaml'
@@ -38,9 +39,9 @@ alias ker='kubectl explain --recursive'
 alias kev='watch -n 0.5 "kubectl get events --sort-by=.metadata.creationTimestamp | tail -5"'
 alias kns='kubens'
 alias kr='kubectl run'
-alias kr='kubectl replace --force -f'
+alias krf='kubectl replace --force -f'
 alias kroyaml='kubectl run --dry-run -o yaml'
 alias krpo='kubectl run --generator=run-pod/v1'
 alias krpooyaml='kubectl run --generator=run-pod/v1 --dry-run -o yaml'
-alias kw='watch -n 0.5 "kubectl get namespace,node,ingress,pod,svc,job,cronjob,deployment,rs,pv,pvc,secret,ep -o wide"'
+alias kw='watch -n 0.5 "kubectl get namespace,node,ingress,pod,svc,job,cronjob,deployment,rs,pv,pvc,cm,secret,ep -o wide"'
 
